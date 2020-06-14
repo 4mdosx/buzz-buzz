@@ -14,7 +14,7 @@ export default class Telegram {
     return await this.client.get(`/getUpdates`, params)
   }
 
-  async sendMessage (chat_id: number, text: String, options = {}) {
+  async sendMessage (chat_id: number | string, text: String, options = {}) {
     return await this.client.post(`/sendMessage`, { body: { chat_id, text, ...options } })
   }
 

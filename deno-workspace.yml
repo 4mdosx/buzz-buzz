@@ -1,0 +1,11 @@
+scripts:
+  start:
+    file: app.ts
+  bot:
+    file: ./buzz/app.ts
+globals:
+  deno_options:
+    allow-read: true
+    allow-net: true
+    allow-env: true
+    allow-write: true

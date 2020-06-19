@@ -2,13 +2,10 @@
   "$schema": "https://deno.land/x/denon/schema.json",
 
   "scripts": {
-    "start": {
-      "cmd": "deno run app.ts",
-      "desc": "run my app.ts file",
-      "allow": ["net", "write", "env"],
-      "env": {
-        "PORT": "3000"
-      }
+    "dev-bot": {
+      "cmd": "deno run ./buzz/app.ts",
+      "desc": "run my bot",
+      "allow": ["net", "read", "write", "env"]
     }
   }
 }

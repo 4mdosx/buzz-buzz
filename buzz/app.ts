@@ -2,17 +2,20 @@ import { Context } from '../tgbot/context.ts'
 import { Bot } from '../tgbot/bot.ts'
 import config from '../config.js'
 import { textParser } from './textParser.ts'
+import controller from './controller/mod.ts'
 
 export const msgHandler = async function (ctx: Context) {
   const { message } = ctx.update
   if (message.text) {
-    const command = textParser(message.text)
+    const cmd = textParser(message.text)
     if (message.chat.type === 'group') {
-      switch (command.command) {
+      switch (cmd.command) {
         case 'help':
           await ctx.telegram.sendMessage(message.chat.id, '在写了，在写了')
           break
-
+        case 'hi':
+          await controller.hi(ctx, cmd)
+          break
         default:
           await ctx.reply('收到不可用的命令，试试`/help`')
       }

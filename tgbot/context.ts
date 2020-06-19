@@ -1,9 +1,11 @@
 import Telegram from './telegram.ts'
 import { Message, Chat, Update, ReplyParams } from './type/mod.ts'
+import { getPool } from '../db/client.ts'
 
 export class Context {
   public readonly message?: Message
   public readonly chat?: Chat
+  public readonly pool = getPool()
 
   constructor(
     public readonly update: Update,

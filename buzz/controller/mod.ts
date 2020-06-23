@@ -1,6 +1,7 @@
 import { Context } from '../../tgbot/context.ts'
 import { textCMD } from '../textParser.ts'
 import todo from './todo.ts'
+import set from './set.ts'
 
 async function hi(ctx: Context, cmd: textCMD) {
   const { message, pool } = ctx
@@ -27,4 +28,5 @@ async function hi(ctx: Context, cmd: textCMD) {
 export default {
   hi,
   todo,
+  set
 }

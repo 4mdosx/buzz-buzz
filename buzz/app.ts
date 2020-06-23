@@ -16,6 +16,9 @@ export const msgHandler = async function (ctx: Context) {
         case 'hi':
           await controller.hi(ctx, cmd)
           break
+        case 'td':
+          await controller.todo(ctx, cmd)
+          break
         default:
           await ctx.reply('收到不可用的命令，试试`/help`')
       }

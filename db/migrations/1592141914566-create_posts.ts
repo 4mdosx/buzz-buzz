@@ -18,5 +18,5 @@ export const up: Migration = () => {
 
 export const down: Migration = () => {
   return dex.schema
-  .dropTableIfExists("posts")
+  .dropTableIfExists("posts").toString()
 }

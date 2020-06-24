@@ -22,6 +22,9 @@ export const msgHandler = async function (ctx: Context) {
         case 'set':
           await controller.set(ctx, cmd)
           break
+        case 'flag':
+          await controller.flag(ctx, cmd)
+          break
         default:
           await ctx.reply('收到不可用的命令，试试`/help`')
       }

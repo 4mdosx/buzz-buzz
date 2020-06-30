@@ -12,6 +12,18 @@
 ### update todo porgress
 `/td ins {number_code}  -s {progress<number>}`
 
-## setteings
+## flag
+
+### set
+`/flag name -d datestemp`
+
+### clear
+`/flag clear`
+
+## timer
+
+`/timer time {name}`
+
+## settings
 
 `/set {name} {value}`

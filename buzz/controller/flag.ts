@@ -81,7 +81,7 @@ async function flag(ctx: Context, cmd: textCMD) {
             `-------------------------- \n ${t.name} \n deadline: ${format(t.deadline_at, 'MM-dd HH:mm', {})} \n`
         )
         .join('\n')
-      || 'no message')
+      || 'no flags')
     }
   }
 }

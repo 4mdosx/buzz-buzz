@@ -3,6 +3,7 @@ import { textCMD } from '../textParser.ts'
 import todo from './todo.ts'
 import set from './set.ts'
 import flag from './flag.ts'
+import timer from './timer.ts'
 
 async function hi(ctx: Context, cmd: textCMD) {
   const { message, pool } = ctx
@@ -30,5 +31,6 @@ export default {
   hi,
   todo,
   set,
-  flag
+  flag,
+  timer
 }

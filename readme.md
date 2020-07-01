@@ -21,7 +21,7 @@
 `/flag clear`
 
 ## timer
-`/timer time {name}`
+`/timer {time second} {timer name}`
 
 ## settings
 `/set {name} {value}`

@@ -25,7 +25,13 @@ export const msgHandler = async function (ctx: Context) {
         await controller.timer(ctx, cmd)
         break
       case 'set':
-        await controller.set(ctx, cmd)
+        await controller.setting(ctx, cmd)
+        break
+      case 'get':
+        await controller.setting(ctx, cmd)
+        break
+      case 'slist':
+        await controller.setting(ctx, cmd)
         break
       default:
         await ctx.reply('收到不可用的命令，试试`/help`')

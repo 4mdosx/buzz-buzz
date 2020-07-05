@@ -1,5 +1,4 @@
-
-# Group use case
+# Use case
 
 ## start
 `/hi`
@@ -20,8 +19,20 @@
 ### clear
 `/flag clear`
 
+# Utils
+
 ## timer
 `/timer {time second} {timer name}`
 
+## hash
+`/hash {string} {salt}` // default settings salt
+
+## roll
+`/roll {d20 exp}`
+
 ## settings
 `/set {name} {value}`
+
+`/get {name}`
+
+`/get-list`

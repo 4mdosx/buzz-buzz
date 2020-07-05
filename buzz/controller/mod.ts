@@ -1,7 +1,7 @@
 import { Context } from '../../tgbot/context.ts'
 import { textCMD } from '../textParser.ts'
 import todo from './todo.ts'
-import set from './set.ts'
+import setting from './setting.ts'
 import flag from './flag.ts'
 import timer from './timer.ts'
 
@@ -30,7 +30,7 @@ async function hi(ctx: Context, cmd: textCMD) {
 export default {
   hi,
   todo,
-  set,
+  setting,
   flag,
   timer
 }

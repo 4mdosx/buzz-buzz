@@ -15,7 +15,11 @@ async function setting(ctx: Context, cmd: textCMD) {
   if (res.error) {
     ctx.reply(res.error.toString())
   }
-  const { rows: [user] } = await pool.query().select('*')
+  const {
+    rows: [user],
+  } = await pool
+    .query()
+    .select('*')
     .from('users')
     .where({
       username: message?.from.username,
@@ -39,11 +43,12 @@ async function setting(ctx: Context, cmd: textCMD) {
         rows: [setting],
       } = await pool
         .query()
+        .select('*')
+        .from('settings')
         .where({
           name,
           user_id: user.id,
         })
-        .into('settings')
         .fetch()
 
       if (setting) {

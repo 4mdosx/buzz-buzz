@@ -4,6 +4,7 @@ import todo from './todo.ts'
 import setting from './setting.ts'
 import flag from './flag.ts'
 import timer from './timer.ts'
+import hash from './hash.ts'
 
 async function hi(ctx: Context, cmd: textCMD) {
   const { message, pool } = ctx
@@ -32,5 +33,6 @@ export default {
   todo,
   setting,
   flag,
-  timer
+  timer,
+  hash
 }

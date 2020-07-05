@@ -16,3 +16,5 @@ export const argsSettings = {
   types,
   symbols,
 }
+
+export * as bcrypt from "https://deno.land/x/bcrypt/mod.ts"

@@ -24,6 +24,9 @@ export const msgHandler = async function (ctx: Context) {
       case 'timer':
         await controller.timer(ctx, cmd)
         break
+      case 'hash':
+        await controller.hash(ctx, cmd)
+        break
       case 'set':
         await controller.setting(ctx, cmd)
         break

@@ -5,7 +5,8 @@
     "dev-bot": {
       "cmd": "deno run ./buzz/app.ts",
       "desc": "run my bot",
-      "allow": ["net", "read", "write", "env"]
+      "allow": ["net", "read", "write", "env"],
+      "unstable": true
     }
   }
 }

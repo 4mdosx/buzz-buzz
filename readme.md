@@ -25,7 +25,7 @@
 `/timer {time second} {timer name}`
 
 ## hash
-`/hash {string} {salt}` // default settings salt
+`/hash {string}`
 
 ## roll
 `/roll {d20 exp}`

@@ -1,6 +1,7 @@
 import Telegram from './telegram.ts'
 import { Message, Chat, Update, ReplyParams } from './type/mod.ts'
 import { getPool } from '../db/client.ts'
+import { logger } from '../logger.ts'
 
 export class Context {
   public readonly message?: Message
@@ -25,5 +26,13 @@ export class Context {
         ...params,
       })
     }
+  }
+
+  public throw (error: Error | string) {
+    if (typeof error === 'string') {
+      error = new Error(error)
+    }
+    logger.warning(error)
+    this.reply('oooops, something error: ' + error.message)
   }
 }

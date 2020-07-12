@@ -2,7 +2,7 @@ import { Context } from '../tgbot/context.ts'
 import { Bot } from '../tgbot/bot.ts'
 import config from '../config.js'
 import { textParser } from './textParser.ts'
-import controller from './controller/mod.ts'
+import cmdHandle from './cmd/mod.ts'
 
 export const msgHandler = async function (ctx: Context) {
   const { message } = ctx.update
@@ -13,28 +13,28 @@ export const msgHandler = async function (ctx: Context) {
         await ctx.telegram.sendMessage(message.chat.id, '在写了，在写了')
         break
       case 'hi':
-        await controller.hi(ctx, cmd)
+        await cmdHandle.hi(ctx, cmd)
         break
       case 'td':
-        await controller.todo(ctx, cmd)
+        await cmdHandle.todo(ctx, cmd)
         break
       case 'flag':
-        await controller.flag(ctx, cmd)
+        await cmdHandle.flag(ctx, cmd)
         break
       case 'timer':
-        await controller.timer(ctx, cmd)
+        await cmdHandle.timer(ctx, cmd)
         break
       case 'hash':
-        await controller.hash(ctx, cmd)
+        await cmdHandle.hash(ctx, cmd)
         break
       case 'set':
-        await controller.setting(ctx, cmd)
+        await cmdHandle.setting(ctx, cmd)
         break
       case 'get':
-        await controller.setting(ctx, cmd)
+        await cmdHandle.setting(ctx, cmd)
         break
       case 'slist':
-        await controller.setting(ctx, cmd)
+        await cmdHandle.setting(ctx, cmd)
         break
       default:
         await ctx.reply('收到不可用的命令，试试`/help`')
